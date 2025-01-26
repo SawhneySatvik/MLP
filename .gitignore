@@ -8,3 +8,25 @@ __pycache__/
 # VSCode files 
 .vscode/
 .idea/
+
+OPPE2-Test
+
+.env
+
+Email/
+Email 
+
+.gitignore
+
+package-lock.json
+package.json
+
+TDS
+TDS/
+
+
+node_modules
+node_modules/
+
+MLP_Project
+MLP_Project/

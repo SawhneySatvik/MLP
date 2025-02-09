@@ -5,6 +5,9 @@ on:
     - cron: "30 5 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   commit:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
         run: |
           echo "Last run: $(date)" > last_run.txt
           git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "23f2003680@ds.study.iitm.ac.in"
+          git config --global user.email "satvik.sawhney2005@gmail.com"
           git add last_run.txt
           git commit -m "Automated commit: $(date)"
           git push

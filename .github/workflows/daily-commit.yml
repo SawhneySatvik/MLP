@@ -1,0 +1,23 @@
+name: Daily Commit Automation
+
+on:
+  schedule:
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Make a Change - 23f2003680@ds.study.iitm.ac.in
+        run: |
+          echo "Last run: $(date)" > last_run.txt
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "23f2003680@ds.study.iitm.ac.in"
+          git add last_run.txt
+          git commit -m "Automated commit: $(date)"
+          git push
